@@ -1,0 +1,31 @@
+.rightBar{
+    flex:2.5;
+}
+
+.rightbarWrapper{
+    padding: 20px;
+}
+
+.rightbarimg{
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.usersDisplay{
+    display: flex;
+    /* flex-direction: row; */
+    row-gap: 20px;
+}
+
+.rightbarExtra{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.gift{
+
+    color: rgb(249, 20, 20);
+}

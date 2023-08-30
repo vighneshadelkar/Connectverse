@@ -1,0 +1,18 @@
+.profileRightbar{
+    flex: 2.5;
+}
+
+.profileRightbarWrapper{
+    padding: 20px;
+}
+
+.pfList{
+    list-style: none;
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 0;
+}
+.pfListItem{
+    margin: 0;
+}

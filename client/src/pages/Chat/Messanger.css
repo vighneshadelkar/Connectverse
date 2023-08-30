@@ -1,0 +1,30 @@
+.Messanger{
+    
+    /* margin-top: 20px; */
+    height: 80vh;
+}
+
+.MessangerWrapper{
+    margin: 10px;
+    display: flex;
+}
+
+.messangerTop{
+    width: 55vw;
+    height: 80vh;
+    background-color: rgb(235, 233, 233);
+    padding: 10px;
+    overflow-y: scroll;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+.chatbot{
+    height: 100vh;
+    width: 100%;
+    flex: 7;
+}
+
+.messangerBottom{
+    margin-top: 10px;
+}
