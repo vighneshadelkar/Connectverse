@@ -58,7 +58,7 @@ export default function Messanger() {
       };
 
       const res = await fetch(
-        `http://localhost:5000/conversation/${user._id}`,
+        `http://localhost:5000/conversation/${AuthUser.success._id}`,
         requestOptions
       );
       const result = await res.json();
