@@ -44,7 +44,7 @@ export default function Login() {
       console.error();
 
     } else {
-      setAuthUser(loginData);
+      setAuthUser(result);
       setisLoggedIn(true);
       setloginData({
         email: "",

@@ -107,7 +107,7 @@ Authrouter.post('/login', async (req, res) => {
             //     success: true
             // })
             res.status(200).json({
-                success: true
+                success: user
             })
         }
     } catch (error) {
