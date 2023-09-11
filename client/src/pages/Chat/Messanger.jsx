@@ -6,8 +6,8 @@ import { AuthContext } from "../../context/AuthContext";
 import Conversations from "../../components/Conversations/Conversations";
 import Navbar from "../../components/Navbar/Navbar";
 
-import io from 'socket.io-client';
-const socket = io('http://localhost:9000');
+// import io from 'socket.io-client';
+// const socket = io('http://localhost:9000');
 
 export default function Messanger() {
   const { AuthUser } = useContext(AuthContext);
@@ -18,37 +18,37 @@ export default function Messanger() {
   const [user, setuser] = useState(AuthUser);
   
   console.log(messages)
-  // useEffect(() => {
-  //   async function getMessages() {
-  //     let requestOptions = {
-  //       method: "GET",
-  //       redirect: "follow",
-  //     };
+  useEffect(() => {
+    async function getMessages() {
+      let requestOptions = {
+        method: "GET",
+        redirect: "follow",
+      };
 
-  //     const res = await fetch(
-  //       "http://localhost:5000/message/" + currentChat?._id,
-  //       requestOptions
-  //     );
+      const res = await fetch(
+        "http://localhost:5000/message/" + currentChat?._id,
+        requestOptions
+      );
 
-  //     const result = await res.json();
+      const result = await res.json();
 
-  //     if (res) {
-  //       setmessages(result);
-  //     }
-  //   }
-  //   getMessages();
-  // }, [currentChat]);
+      if (res) {
+        setmessages(result);
+      }
+    }
+    getMessages();
+  }, [currentChat]);
 
-  useEffect(()=>{
-    socket.on("connection",()=>{
-      socket.emit("getMessages",{currentChat})
+  // useEffect(()=>{
+  //   socket.on("connection",()=>{
+  //     socket.emit("getMessages",{currentChat})
       
-    })
+  //   })
 
-    socket.on("getMessages",(payload)=>{
-      setmessages([payload])
-    })
-  },[])
+  //   socket.on("getMessages",(payload)=>{
+  //     setmessages([payload])
+  //   })
+  // },[currentChat])
 
   useEffect(() => {
     async function getConversations() {
