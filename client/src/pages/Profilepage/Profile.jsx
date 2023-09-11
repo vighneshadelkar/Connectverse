@@ -32,7 +32,7 @@ export default function Profile() {
             <img src={coverImg} alt="coverimg" className="profileCoverImg" />
             <img src={profilePic} alt="profile" className="profilePic"></img>
             <span className="profileInfo">
-              <h2 className="username">{AuthUser.firstname + " " +AuthUser.lastname}</h2>
+              <h2 className="username">{AuthUser.email}</h2>
               <span className="userInfo">Hello everyone!!</span>
             </span>
           </div>
